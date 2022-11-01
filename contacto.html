@@ -85,34 +85,34 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-7 text-primary">
                     <h1 class="fw-bold">Contactanos!</h1>
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" id="form" novalidate action="https://formspree.io/f/myyvbpeb" method="POST">
                         <fieldset>
                             <legend class=" text-center bg-secondary">Tus Datos</legend>
 
                             <div class="mb-3">
                                 <label class="form-label" for="nombre">Nombre:</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Tu Nombre" required>
+                                <input name="Nombre: " type="text" class="form-control" id="nombre" placeholder="Tu Nombre" required>
                                 <span class="valid-feedback">todo bien...</span>
                                 <span class="invalid-feedback">Hubo un error...</span>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label" for="correo">E-mail:</label>
-                                <input type="email" class="form-control" id="correo" placeholder="Correo" required>
+                                <input name="E-mail: " type="email" class="form-control" id="correo" placeholder="Correo" required>
                                 <span class="valid-feedback">todo bien...</span>
                                 <span class="invalid-feedback">Hubo un error...</span>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label" for="tel">Teléfono:</label>
-                                <input type="tel" class="form-control" id="tel" placeholder="Tu telefono" required>
+                                <input name="Teléfono: " type="tel" class="form-control" id="tel" placeholder="Tu telefono" required>
                                 <span class="valid-feedback">todo bien...</span>
                                 <span class="invalid-feedback">Hubo un error...</span>
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label" for="nombre">Nombre:</label>
-                                <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                                <label class="form-label" for="nombre">Mensaje:</label>
+                                <textarea name="Mensaje: " class="form-control" name="" id="" cols="30" rows="10"></textarea>
                             </div>
                         </fieldset>
 
@@ -133,7 +133,7 @@
           </a>
       </div>
     </footer>
-  <script>
+  <script> //validacion bootstrap
           // Example starter JavaScript for disabling form submissions if there are invalid fields
           (() => {
         'use strict'
@@ -153,6 +153,7 @@
           }, false)
         })
       })()
-    </script>
+  </script>
+  <script src="form.js"></script> <!-- formulario -->
 </body>
 </html>
