@@ -567,12 +567,12 @@ textarea.form-control {
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
- :not(.btn-check) + .btn:active, .btn:first-child:active {
+ :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.show {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
- :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible {
+ :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.show:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
 .btn:disabled, fieldset:disabled .btn {
@@ -726,6 +726,10 @@ textarea.form-control {
   background-color: transparent;
 }
 
+.dropdown-menu.show {
+  display: block;
+}
+
 .nav {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
@@ -770,6 +774,9 @@ textarea.form-control {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+}
+.navbar-nav .show > .nav-link {
+  color: var(--bs-navbar-active-color);
 }
 .navbar-nav .dropdown-menu {
   position: static;
@@ -901,6 +908,9 @@ textarea.form-control {
     transition: none;
   }
 }
+.modal.show .modal-dialog {
+  transform: none;
+}
 
 .modal-dialog-centered {
   display: flex;
@@ -937,6 +947,11 @@ textarea.form-control {
     max-width: var(--bs-modal-width);
     margin-right: auto;
     margin-left: auto;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    --bs-modal-width: 800px;
   }
 }
 
